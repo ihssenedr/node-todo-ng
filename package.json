@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./server/server.ts",
+    "start": "tsc && node ./lib/server/server.js",
     "ts-dev" : "ts-node-dev ./server/server.ts",
     "ts-compile": "tsc",
     "dev" : "nodemon ./lib/server/server.js"
