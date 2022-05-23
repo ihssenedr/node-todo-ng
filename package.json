@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/server.ts",
     "ts-dev" : "ts-node-dev ./server/server.ts",
     "ts-compile": "tsc",
     "dev" : "nodemon ./lib/server/server.js"
@@ -24,5 +25,9 @@
     "nodemon": "^2.0.16",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.6.4"
+  },
+    "engines": {
+      "node": "16.10.0",
+      "npm": "7.24.0"
+    }
   }
-}
