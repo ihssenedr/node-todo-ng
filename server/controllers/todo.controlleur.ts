@@ -45,9 +45,10 @@ export const onUpdateTodoById = async (req: Request, res: Response) => {
   if (!req.params.id) return res.status(400).json("Todo ID is required!")
   const { id } = req.params
   const  todo = req.body
-  console.log('todo', todo  .state)
+  console.log('todo', todo.state + + ' ' + id)
   try {
     await pool.query("UPDATE todos SET STATE = $1 WHERE _id = $2", [todo.state, id])
+    await pool.query("COMMIT")
     res.status(200).json("Updated!")
   } catch (err) {
     console.error(`Error in getting todos: ${err}`)
